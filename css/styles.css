@@ -7,6 +7,27 @@ html, body {
     width: 100%;
     height: 240px;
     background-color: #ffd609;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app-name-logo {
+    width:600px;
+    /* Align the logo and text vertically relative to each other */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Adds a nice, clean space between the logo and text */
+    padding-left: 20px; /* Optional: adds some breathing room from the screen edge */
+}
+
+#logo {
+    width: 64px;
+    height: 64px;
+}
+
+#app-name {
+    font-size: 32px;
 }
 
 #bottom {
