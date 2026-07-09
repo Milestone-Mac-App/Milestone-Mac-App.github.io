@@ -45,12 +45,22 @@ html, body {
 
 #left-in-top {
     width: 50%;
-    background-color: red;
+}
+
+#title-and-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#title {
+    font-family: var(--font-heading);
+    color: var(--text-color-dark);
+    font-size: 30px;
+    margin: 0px;
 }
 
 #right-in-top {
     width: 50%;
-    background-color: blue;
 }
 
 #logo {
