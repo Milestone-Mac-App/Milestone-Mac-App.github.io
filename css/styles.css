@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,400&display=swap');
 
 /* 2. Define the font family variables */
 :root {
-  --font-heading: 'Fraunces', serif;
-  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Lora', serif;
+  --font-body: 'Instrument Sans', sans-serif;
   --text-color-dark: #594a37;
 }
 
