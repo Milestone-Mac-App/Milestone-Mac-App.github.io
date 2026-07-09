@@ -4,6 +4,7 @@
 :root {
   --font-heading: 'Fraunces', serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
+  --text-color-dark: #594a37;
 }
 
 html, body {
@@ -18,7 +19,7 @@ html, body {
 #app-name {
     font-family: var(--font-heading);
     background-color: #f7f3e7;
-    color: #594a37;
+    color: var(--text-color-dark);
     font-size: 32px;
     width: 600px;
     margin: 0 auto;
