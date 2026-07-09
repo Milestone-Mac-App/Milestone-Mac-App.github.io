@@ -3,16 +3,30 @@ html, body {
     margin: 0;
 }
 
+#app-name-div {
+    background-color: #f7f3e7;
+}
+
+#app-name {
+    background-color: #f7f3e7;
+    color: black;
+    font-size: 32px;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
 #top {
     width: 100%;
     height: 240px;
-    background-color: #1e1e1e;
+    background-color: #f7f3e7;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#app-name-logo {
+#app-logo {
     width:600px;
     /* Align the logo and text vertically relative to each other */
     display: flex;
@@ -26,12 +40,8 @@ html, body {
     height: 64px;
 }
 
-#app-name {
-    font-size: 32px;
-    color: white;
-}
 
 #bottom {
-    background-color: #1e1e1e;
+    background-color: white;
     width: 100%
 }
