@@ -36,18 +36,26 @@ html, body {
     justify-content: center;
 }
 
-#app-logo {
-    width:600px;
-    /* Align the logo and text vertically relative to each other */
+#top-content {
+    width: 880px;
+    margin: 0 auto;
     display: flex;
-    align-items: center;
-    gap: 12px; /* Adds a nice, clean space between the logo and text */
-    padding-left: 20px; /* Optional: adds some breathing room from the screen edge */
+    justify-content: space-between;
+}
+
+#left-in-top {
+    width: 50%;
+    background-color: red;
+}
+
+#right-in-top {
+    width: 50%;
+    background-color: blue;
 }
 
 #logo {
-    width: 64px;
-    height: 64px;
+    width: 120px;
+    height: 120px;
 }
 
 
