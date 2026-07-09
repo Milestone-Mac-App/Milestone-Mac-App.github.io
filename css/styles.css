@@ -5,6 +5,9 @@
   --font-heading: 'Lora', serif;
   --font-body: 'Instrument Sans', sans-serif;
   --text-color-dark: #594a37;
+
+  --color-sage: #848D7A;
+  --color-sage-dark: #727A69;
 }
 
 html, body {
@@ -29,11 +32,11 @@ html, body {
 
 #top {
     width: 100%;
-    height: 240px;
     background-color: #f7f3e7;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 20px;
 }
 
 #top-content {
@@ -64,6 +67,65 @@ html, body {
     color: var(--text-color-dark);
     font-size: 20px;
     width: 70%;
+    margin-bottom: 12px;
+}
+
+.mac-download-btn {
+  position: relative; /* Needed to anchor the inner dashed line */
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: var(--color-sage);
+  
+  /* Layout & Spacing */
+  padding: 14px 32px; /* Slightly widened padding for better visual balance */
+  text-decoration: none;
+  border-radius: 12px; /* Mac-style squircle roundness */
+  
+  /* Reset standard borders */
+  border: none;
+  
+  /* Smooth interaction */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  /* Soft shadow for depth */
+  box-shadow: 0 4px 12px rgba(132, 141, 122, 0.2);
+}
+
+/* The Stitched Inner Dashed Line */
+.mac-download-btn::after {
+  content: '';
+  position: absolute;
+  
+  /* This controls the padding/gap between the button edge and the dashes */
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  
+  /* Create the dashes */
+  border: 2.0px dashed rgba(255, 255, 255, 0.6);
+  
+  /* Matches the button corner curves proportionally */
+  border-radius: 8px; 
+  
+  /* Ensures clicks pass through to the button */
+  pointer-events: none; 
+}
+
+/* Hover & Active States */
+.mac-download-btn:hover {
+  background-color: var(--color-sage-dark);
+  box-shadow: 0 6px 16px rgba(132, 141, 122, 0.3);
+  transform: translateY(-1px);
+}
+
+.mac-download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(132, 141, 122, 0.2);
 }
 
 #right-in-top {
