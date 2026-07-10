@@ -8,6 +8,9 @@
 
   --color-sage: #848D7A;
   --color-sage-dark: #727A69;
+
+  --color-text-main: #2D2C2A;
+  --color-text-muted: #5C5A57;
 }
 
 html, body {
@@ -159,4 +162,97 @@ html, body {
 #bottom {
     background-color: white;
     width: 100%
+}
+
+/* Section Container */
+.features-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #FFFFFF; /* Bottom half background color from demo image */
+}
+
+/* Section Title */
+.features-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--color-text-main);
+  margin-bottom: 50px;
+}
+
+/* Responsive Grid Layout */
+.features-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0; /* Handled by internal borders instead */
+}
+
+/* Individual Feature Columns */
+.feature-card {
+  flex: 1;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Tactile Dashed Dividers between columns */
+.feature-card:not(:last-child) {
+  border-right: 2.0px dashed #C5C3BF;
+}
+
+/* Icon Container & Stylings */
+.feature-icon {
+  color: var(--color-sage);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography inside Feature Cards */
+.feature-card h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-text-main);
+  margin: 0 0 4px 0;
+}
+
+.feature-card h4 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--color-text-main);
+  margin: 0 0 6px 0;
+}
+
+.feature-card p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* Responsive collapse for mobile viewports */
+@media (max-width: 768px) {
+  .features-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .feature-card {
+    padding: 0;
+    width: 100%;
+  }
+  
+  .feature-card:not(:last-child) {
+    border-right: none;
+    border-bottom: 1.5px dashed #C5C3BF;
+    padding-bottom: 40px;
+  }
 }
