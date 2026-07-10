@@ -75,6 +75,12 @@ html, body {
     margin-bottom: 12px;
 }
 
+#download-div {
+    display: flex;
+    align-items: center; /* Vertically centers the buttons perfectly */
+    gap: 16px;
+}
+
 .mac-download-btn {
   position: relative; /* Needed to anchor the inner dashed line */
   display: inline-block;
@@ -131,6 +137,42 @@ html, body {
 .mac-download-btn:active {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(132, 141, 122, 0.2);
+}
+
+.mac-learn-more-btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text-main);
+  background-color: transparent;
+  
+  /* Layout & Spacing */
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 12px; /* Mac-style squircle roundness */
+  
+  /* Clean border to distinguish it from the primary CTA button */
+  border: 2.0px solid rgba(45, 44, 42, 0.15);
+
+  box-sizing: border-box;
+  
+  /* Smooth interaction */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover & Active States */
+.mac-learn-more-btn:hover {
+  color: var(--color-sage);
+  border-color: var(--color-sage);
+  background-color: rgba(132, 141, 122, 0.05); /* Very soft hint of sage background tint */
+  transform: translateY(-1px);
+}
+
+.mac-learn-more-btn:active {
+  transform: translateY(0);
+  background-color: rgba(132, 141, 122, 0.1);
 }
 
 #right-in-top {
