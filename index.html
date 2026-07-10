@@ -81,5 +81,42 @@
                 </section>
             </div>
         </div>
+
+        <div id="download-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="close-modal-btn">&times;</button>
+                <h3 class="modal-title">Choose your Mac Architecture</h3>
+                <p class="modal-subtitle">Select the version compatible with your Mac hardware.</p>
+                
+                <div class="modal-actions">
+                    <a href="#" class="popup-btn intel-btn">Apple Intel</a>
+                    <a href="#" class="popup-btn silicon-btn">Apple Silicon</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const downloadBtn = document.querySelector('.mac-download-btn');
+            const modal = document.getElementById('download-modal');
+            const closeBtn = document.querySelector('.close-modal-btn');
+
+            // Open modal on click
+            downloadBtn.addEventListener('click', (e) => {
+                e.preventDefault(); // Stop page from jumping/reloading
+                modal.classList.add('active');
+            });
+
+            // Close modal when clicking 'X'
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            // Close modal when clicking outside the container
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        </script>
     </body>
 </html>

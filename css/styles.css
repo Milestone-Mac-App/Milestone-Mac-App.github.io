@@ -298,3 +298,117 @@ html, body {
     padding-bottom: 40px;
   }
 }
+
+/* --- Modal Popup Styles --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Dimmed backdrop */
+  backdrop-filter: blur(4px); /* Modern frosted-glass effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* Open state modifier via JS */
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background-color: #f7f3e7; /* Matching your top section tint */
+  padding: 32px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 440px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  font-family: var(--font-body);
+  transform: translateY(10px);
+  transition: transform 0.25s ease-in-out;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal-btn:hover {
+  color: var(--color-text-main);
+}
+
+.modal-title {
+  margin: 0 0 8px 0;
+  font-family: var(--font-heading);
+  color: var(--text-color-dark);
+  font-size: 22px;
+}
+
+.modal-subtitle {
+  margin: 0 0 24px 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* Architecture Options styling */
+.popup-btn {
+  flex: 1;
+  display: inline-block;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Secondary choice (Intel) */
+.intel-btn {
+  color: var(--color-text-main);
+  background-color: transparent;
+  border: 2px solid rgba(45, 44, 42, 0.15);
+}
+
+.intel-btn:hover {
+  background-color: rgba(45, 44, 42, 0.05);
+  border-color: var(--color-text-main);
+}
+
+/* Primary recommended choice (Silicon) */
+.silicon-btn {
+  color: #FFFFFF;
+  background-color: var(--color-sage);
+  border: 2px solid transparent;
+}
+
+.silicon-btn:hover {
+  background-color: var(--color-sage-dark);
+}
