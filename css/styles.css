@@ -11,6 +11,8 @@
 
   --color-text-main: #2D2C2A;
   --color-text-muted: #5C5A57;
+
+  --color-border-stitch: #E1E0DD;
 }
 
 html, body {
@@ -411,4 +413,185 @@ html, body {
 
 .silicon-btn:hover {
   background-color: var(--color-sage-dark);
+}
+
+/* Base Styles for Section Titles */
+.section-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-text-main);
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* --- 1. THE INTERACTIVE SHOWCASE (Layout & Design) --- */
+
+.showcase-section {
+  padding: 80px 0;
+}
+
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Video Wrapper with the Stitched 'M' Effect */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  background: #000;
+  border-radius: 16px; /* Mac-style roundness */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Stitched Inner Overlay (CSS only, no image needed) */
+.video-container::after {
+  content: '';
+  position: absolute;
+  /* Space/Padding from the outer edge */
+  top: 6px; 
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  pointer-events: none;
+  
+  /* Create the dashed "stitched" ring from image_0.png */
+  border: 2.0px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+}
+
+.video-mockup {
+  width: 100%;
+  display: block;
+  opacity: 0.95; /* Slight black mask for content pop */
+}
+
+
+/* --- 3. COZY FAQ (Layout & Design) --- */
+
+.faq-section {
+  padding: 60px 0 100px; /* Extra padding on bottom for balance */
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-stack {
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.faq-item {
+  padding: 30px 0;
+}
+
+/* Subtle Dashed Separator between FAQ items (matches features divider) */
+.faq-item:not(:first-child) {
+  border-top: 1.5px dashed var(--color-border-stitch);
+}
+
+.faq-item h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-text-main);
+  margin-top: 0;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Optional cozy bullet effect */
+.faq-item h3::before {
+  content: '▶';
+  font-size: 12px;
+  color: var(--color-sage);
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+.faq-item p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-text-muted);
+  margin: 0;
+  padding-left: 20px; /* Match H3 padding */
+}
+
+/* Footer wrapper extending full width */
+.site-footer {
+  width: 100%;
+  padding: 40px 0;
+  background-color: transparent; /* Seamlessly blends into your section background */
+}
+
+/* Flex layout container matching image positioning */
+.footer-container {
+  max-width: 900px; /* Aligns comfortably under the FAQ width layout */
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end; /* Pushes items to the right side of the screen */
+  align-items: center;
+  gap: 32px; /* Uniform spacing between navigation grouping and app store link */
+}
+
+/* Navigation link container */
+.footer-links {
+  display: flex;
+  gap: 24px; /* Spacing between "Support" and "Privacy" */
+}
+
+/* Styling for text links */
+.footer-link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-text-main);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Interactions matching your design details */
+.footer-link:hover {
+  color: var(--color-sage);
+}
+
+/* Inline wrapper block for the App Store Vector graphic */
+.app-store-badge {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  border-radius: 8px;
+}
+
+/* Smooth scaling pop on hover */
+.app-store-badge:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.app-store-badge:active {
+  transform: translateY(0);
+}
+
+.app-store-svg {
+  display: block;
 }
